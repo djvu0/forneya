@@ -1,0 +1,938 @@
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff5f7;
+    color: #5a3d45;
+    overflow-x: hidden;
+}
+
+
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+
+.section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+
+
+/* =========================
+   LANDING PAGE
+========================= */
+
+
+.landing {
+
+    background:
+    linear-gradient(
+        rgba(255, 192, 203, 0.35),
+        rgba(255, 240, 245, 0.8)
+    ),
+    url("../images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.overlay {
+
+    position: absolute;
+    inset: 0;
+
+    backdrop-filter: blur(3px);
+
+}
+
+
+
+.content {
+
+    position: relative;
+    z-index: 2;
+
+    max-width: 700px;
+
+    animation: fadeUp 1.5s ease;
+
+}
+
+
+
+.small-text {
+
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+
+}
+
+
+
+h1 {
+
+    font-size: clamp(40px, 7vw, 70px);
+    color: #b76e79;
+    margin-bottom: 20px;
+
+}
+
+
+
+h2 {
+
+    font-size: clamp(35px, 5vw, 55px);
+    color: #b76e79;
+    margin-bottom: 30px;
+
+}
+
+
+
+.description {
+
+    font-size: 18px;
+    line-height: 1.8;
+
+}
+
+
+
+.screen-record {
+
+    margin-top: 30px;
+
+    font-size: 14px;
+
+    font-style: italic;
+
+    opacity: .8;
+
+}
+
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+
+button {
+
+    font-family: 'Poppins', sans-serif;
+
+    cursor: pointer;
+
+    border: none;
+
+    transition: .3s ease;
+
+}
+
+
+
+.main-btn,
+.next-btn,
+.buttons button {
+
+
+    margin-top: 40px;
+
+    padding: 14px 35px;
+
+    border-radius: 50px;
+
+    background: #d98c9a;
+
+    color: white;
+
+    font-size: 16px;
+
+    box-shadow:
+    0 10px 25px rgba(217,140,154,.35);
+
+}
+
+
+
+button:hover {
+
+    transform: translateY(-5px);
+
+    background: #c76b7c;
+
+}
+
+
+
+/* =========================
+   HIDDEN SECTIONS
+========================= */
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+
+.music-btn {
+
+    position: fixed;
+
+    top:25px;
+
+    right:25px;
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#d98c9a;
+
+    font-size:22px;
+
+    z-index:999;
+
+}
+
+
+/* =========================
+   APPRECIATION
+========================= */
+
+
+#appreciation {
+
+    background:
+    linear-gradient(
+        #fff5f7,
+        #ffe8ed
+    );
+
+}
+
+#appreciation .content {
+
+    max-width: 700px;
+
+    padding: 35px;
+
+    background: rgba(255,255,255,.65);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.08);
+
+}
+
+#appreciation p {
+
+    font-size: clamp(12px, 1.5vw, 16px);
+
+    line-height: 1.8;
+
+    margin: 15px;
+
+    font-family: 'Poppins', sans-serif;
+
+    color: #5a3d45;
+
+    font-style: italic;
+
+    opacity: .8;
+
+}
+
+
+
+
+/* =========================
+   CARDS
+========================= */
+
+
+.cards {
+
+    display: flex;
+
+    gap: 25px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+.card {
+
+
+    width: 250px;
+
+    min-height: 180px;
+
+
+    padding: 30px;
+
+
+    background:
+    rgba(255,255,255,.65);
+
+
+    border-radius: 25px;
+
+
+    backdrop-filter: blur(10px);
+
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.08);
+
+
+    transition: .5s;
+
+
+}
+
+
+
+.card:hover {
+
+    transform:
+    translateY(-10px)
+    rotate(2deg);
+
+}
+
+
+
+.card h3 {
+
+    color:#b76e79;
+
+    margin-bottom:15px;
+
+}
+
+
+/* =========================
+   LETTER CARD
+========================= */
+
+
+.letter-card {
+
+    max-width:700px;
+
+    padding:40px;
+
+    margin:40px auto 0;
+
+
+    background:
+    rgba(255,255,255,.65);
+
+
+    border-radius:30px;
+
+
+    backdrop-filter:blur(10px);
+
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.08);
+
+
+    text-align:center;
+
+}
+
+
+
+.letter-card h3 {
+
+    font-family:'Playfair Display', serif;
+
+    color:#b76e79;
+
+    font-size:clamp(24px, 4vw, 35px);
+
+    margin-bottom:25px;
+
+}
+
+
+
+.letter-card p {
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:clamp(13px, 2vw, 18px);
+
+    line-height:1.9;
+
+    font-style:italic;
+
+    color:#5a3d45;
+
+    opacity:.85;
+
+}
+
+
+/* =========================
+   QUESTION PAGE
+========================= */
+
+
+#question {
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #ffe8ed,
+        #fff5f7
+    );
+
+}
+
+
+
+.buttons {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+}
+
+
+
+.buttons button {
+
+
+    margin-top:40px;
+
+}
+
+
+
+
+
+/* =========================
+   FLOATING ANIMATION
+========================= */
+
+
+@keyframes fadeUp {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+        translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* =========================
+   MEMORY GALLERY
+========================= */
+
+.memory-intro {
+
+    margin-bottom:30px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+.gallery {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:30px auto;
+
+}
+
+
+
+.photo-card {
+
+    width:240px;
+
+    background:white;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+
+
+.photo-card:hover {
+
+    transform:
+    translateY(-10px)
+    scale(1.05);
+
+}
+
+
+
+.photo-card:nth-child(2){
+
+    transform:rotate(3deg);
+
+}
+
+
+
+.photo-card:nth-child(3){
+
+    transform:rotate(-3deg);
+
+}
+
+
+
+.photo-card img {
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+
+
+.photo-card p {
+
+    margin-top:15px;
+
+    font-family:'Playfair Display', serif;
+
+    color:#b76e79;
+
+    font-size:16px;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:600px){
+
+
+    h1 {
+
+        font-size:42px;
+
+    }
+
+
+
+    .description {
+
+        font-size:16px;
+
+    }
+
+
+
+    .card {
+
+        width: 280px;
+
+        min-height: 220px;
+
+        padding: 35px;
+
+
+        background:
+        rgba(255,255,255,.75);
+
+
+        border-radius: 25px;
+
+
+        backdrop-filter: blur(10px);
+
+
+        box-shadow:
+        0 15px 30px rgba(0,0,0,.08);
+
+
+        transition: .4s;
+
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+    }
+
+
+    .buttons {
+
+        flex-direction:column;
+
+    }
+
+    .card p {
+
+        margin-top:20px;
+
+        line-height:1.8;
+
+        font-size:15px;
+
+        color:#6b4852;
+
+    }
+
+
+    .card h3 {
+
+        font-family:'Playfair Display', serif;
+
+        color:#b76e79;
+
+        font-size:28px;
+
+    }
+
+    .photo-card {
+
+        width:280px;
+
+    }
+
+
+    .photo-card img {
+
+    height:300px;
+
+}
+
+}
+
+/* =========================
+YES PAGE POPUP
+========================= */
+
+
+/* =========================
+   NO POPUP STYLE
+========================= */
+
+.popup {
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255, 192, 203, 0.35);
+
+    backdrop-filter:blur(8px);
+
+    z-index:9999;
+
+}
+
+
+.popup-content {
+
+    width:320px;
+
+    padding:40px 30px;
+
+    background:rgba(255,255,255,0.85);
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 20px 40px rgba(183,110,121,0.25);
+
+    animation:popupOpen .4s ease;
+
+}
+
+
+.popup-content p {
+
+    margin-bottom:25px;
+
+    color:#b76e79;
+
+    font-family:'Playfair Display', serif;
+
+    font-size:26px;
+
+    line-height:1.5;
+
+}
+
+
+#closeNoPopup {
+
+    padding:12px 35px;
+
+    border-radius:50px;
+
+    background:#d98c9a;
+
+    color:white;
+
+    font-size:16px;
+
+    box-shadow:
+    0 10px 25px rgba(217,140,154,.35);
+
+}
+
+
+#closeNoPopup:hover {
+
+    background:#c76b7c;
+
+    transform:translateY(-5px);
+
+}
+
+
+@keyframes popupOpen {
+
+    from {
+
+        opacity:0;
+
+        transform:scale(.8) translateY(20px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:scale(1) translateY(0);
+
+    }
+
+}
+
+
+#noMessage {
+
+    margin-top:20px;
+
+    font-size:1.2rem;
+
+    color:#ff8fab;
+
+    font-style:italic;
+
+    min-height:30px;
+
+    transition:0.3s ease;
+
+}
+
+.yes-page {
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffe8ed,
+        #fff5f7
+    );
+}
+
+/* =========================
+   FLOWER POPUP
+========================= */
+
+#flowerPopup .flower-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+
+#flowerPopup .popup-content {
+
+    width:320px;
+
+    padding:35px 25px;
+
+    background:white;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 20px 40px rgba(183,110,121,0.25);
+
+    animation:popupOpen .4s ease;
+    overflow: hidden;
+
+}
+
+#flowerPopup img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+
+.flower-image {
+
+    width:300px;
+
+    height:300px;
+
+    object-fit:contain;
+
+    margin-bottom:20px;
+
+}
+
+
+#flowerPopup p {
+
+    color:#b76e79;
+
+    font-family:'Playfair Display', serif;
+
+    font-size:22px;
+
+    margin-bottom:25px;
+
+}
+
+
+#closePopup {
+
+    padding:12px 35px;
+
+    border-radius:50px;
+
+    background:#d98c9a;
+
+    color:white;
+
+    font-size:16px;
+
+    box-shadow:
+    0 10px 25px rgba(217,140,154,.35);
+
+}
+
+
+#closePopup:hover {
+
+    background:#c76b7c;
+
+    transform:translateY(-5px);
+
+}
